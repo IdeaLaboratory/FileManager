@@ -11,6 +11,7 @@ namespace FileManager.ViewModels
     /// </summary>
     public class FileManager
     {
+        public string AppTitle { get; set; } = "File Manager";
 
     }
 }
