@@ -4,8 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FileManager.Views"
+             xmlns:ViewModels="clr-namespace:FileManager.ViewModels"
+             xmlns:Converters="clr-namespace:FileManager.ViewModels.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Converters:DevValueConverter x:Key="DevConverter"></Converters:DevValueConverter>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid x:Name="TopGrid" Background="LightCyan">
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -49,7 +57,7 @@
                         <CheckBox IsChecked="{Binding IsRemoving}">Remove</CheckBox>
                     </StackPanel>
                 </GroupBox.Header>
-                <local:RenameRemoveView></local:RenameRemoveView>
+                <local:RenameRemoveView DataContext="{Binding RenameVm}"></local:RenameRemoveView>
             </GroupBox>
             <GroupBox Grid.Column="2">
                 <GroupBox.Header>

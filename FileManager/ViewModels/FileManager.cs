@@ -22,6 +22,14 @@ namespace FileManager.ViewModels
             set { _filePath = value; }
         }
 
+        private RenameRemoveViewModel _renameVm = new RenameRemoveViewModel();
+
+        public  RenameRemoveViewModel RenameVm  
+        {
+            get { return _renameVm; }
+            set { _renameVm = value; }
+        }
+
 
     }
 }
