@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="FileManager.Views.RenameRemoveView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FileManager.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200">
+    <Grid Background="LightSkyBlue">
+        <StackPanel x:Name="RemoveFromFirst" Height="20" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <TextBlock DockPanel.Dock="Left">First</TextBlock>
+            <TextBox Background="WhiteSmoke" HorizontalAlignment="Left" Width="40" Margin="5,0" Text="{Binding First}"/>
+            <TextBlock DockPanel.Dock="Left">skip</TextBlock>
+            <TextBox Background="WhiteSmoke" HorizontalAlignment="Left" Width="40" Margin="5,0" Text="{Binding SkipFirst}"/>
+        </StackPanel>
+        <StackPanel x:Name="RemoveFromLast" Height="20" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <TextBlock DockPanel.Dock="Left">Last</TextBlock>
+            <TextBox Background="WhiteSmoke" HorizontalAlignment="Left" Width="40" Margin="5,0" Text="{Binding Last}"/>
+            <TextBlock DockPanel.Dock="Left">skip</TextBlock>
+            <TextBox Background="WhiteSmoke" HorizontalAlignment="Left" Width="40" Margin="5,0" Text="{Binding SkipLast}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
