@@ -9,9 +9,10 @@ namespace FileManager.ViewModels
     /// <summary>
     /// This is the main\root ViewModel
     /// </summary>
-    public class FileManager
+    public partial class FileManager
     {
         public string AppTitle { get; set; } = "File Manager";
+        public string AppTi { get; set; } = "File";
 
     }
 }
