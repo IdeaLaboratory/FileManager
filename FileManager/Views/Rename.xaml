@@ -18,9 +18,8 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="40"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBox HorizontalAlignment="Stretch" Text="{Binding Path}" Grid.Column="0" ></TextBox>
-            <Button x:Name="BrowsePath" Height="20" Width="40" Grid.Column="1"  HorizontalAlignment="Right"
-                    ></Button>
+            <TextBox HorizontalAlignment="Stretch" Text="{Binding FilePath}" Grid.Column="0" ></TextBox>
+            <Button x:Name="BrowsePath" Height="20" Width="40" Grid.Column="1"  HorizontalAlignment="Right" IsEnabled="False"></Button>
         </Grid>
         <Grid x:Name="FilesView" Background="LightGreen" Grid.Row="1">
             <Grid.ColumnDefinitions>

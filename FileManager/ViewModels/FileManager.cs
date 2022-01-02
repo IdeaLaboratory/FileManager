@@ -13,6 +13,15 @@ namespace FileManager.ViewModels
     {
         public string AppTitle { get; set; } = "File Manager";
         public string AppTi { get; set; } = "File";
+        
+        private string _filePath;
+
+        public string FilePath
+        {
+            get { return _filePath; }
+            set { _filePath = value; }
+        }
+
 
     }
 }

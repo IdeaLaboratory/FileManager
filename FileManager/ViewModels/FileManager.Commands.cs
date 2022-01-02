@@ -14,21 +14,13 @@ namespace FileManager.ViewModels
     /// </summary>
     public partial class FileManager
     {
-        private static string _browsePath;
         private ICommand _command;
 
-        public ICommand Command
-        {
-            get
-            {
-                return _command ?? (_command = new BrowsePathCommand(
+        public ICommand Command => _command ?? (_command = new BrowsePathCommand(
                    x =>
                    {
                        BrowsePath();
                    }));
-            }
-
-        }
 
         private static void BrowsePath()
         {
