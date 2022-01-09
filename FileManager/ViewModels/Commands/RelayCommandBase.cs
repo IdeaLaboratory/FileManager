@@ -92,7 +92,6 @@ namespace FileManager.ViewModels.Commands
 
         public void RaiseCanExecuteChanged()
         {
-            CanExecuteChangedInternal.Raise(this);
         }
     }
 }

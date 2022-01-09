@@ -12,6 +12,6 @@
     </Window.DataContext>
     <!--This is just a container-->
     <Grid>
-        <View:RenameView/>
+        <View:RenameView DataContext="{Binding RenameVm}"/>
     </Grid>
 </Window>

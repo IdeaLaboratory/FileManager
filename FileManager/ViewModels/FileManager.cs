@@ -12,24 +12,15 @@ namespace FileManager.ViewModels
     public partial class FileManager
     {
         public string AppTitle { get; set; } = "File Manager";
-        public string AppTi { get; set; } = "File";
-        
-        private string _filePath;
 
-        public string FilePath
-        {
-            get { return _filePath; }
-            set { _filePath = value; }
-        }
+        private RemoveViewModel _renameVm = new();
 
-        private RenameRemoveViewModel _renameVm = new RenameRemoveViewModel();
-
-        public  RenameRemoveViewModel RenameVm  
+        public RemoveViewModel RenameVm
         {
             get { return _renameVm; }
             set { _renameVm = value; }
         }
 
-
+        public string Status { get; set; } = "Status OK";
     }
 }

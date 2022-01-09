@@ -1,0 +1,9 @@
+Setup=> save all settings
+break all sub settings
+
+File class:
+path
+name
+extension
+CanReduceFarther
+isDuplicate

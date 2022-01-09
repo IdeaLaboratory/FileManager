@@ -5,6 +5,19 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>fm.ico</ApplicationIcon>
+    <PackageIcon>fm.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="fm.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\fm.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

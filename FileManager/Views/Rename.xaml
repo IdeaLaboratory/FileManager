@@ -20,6 +20,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="150"/>
             <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid Background="Beige" Height="20" Grid.Row="0">
             <Grid.ColumnDefinitions>
@@ -57,7 +58,7 @@
                         <CheckBox IsChecked="{Binding IsRemoving}">Remove</CheckBox>
                     </StackPanel>
                 </GroupBox.Header>
-                <local:RenameRemoveView DataContext="{Binding RenameVm}"></local:RenameRemoveView>
+                <local:RenameRemoveView DataContext="{Binding RemoveVm}"></local:RenameRemoveView>
             </GroupBox>
             <GroupBox Grid.Column="2">
                 <GroupBox.Header>
@@ -101,6 +102,9 @@
             <Button HorizontalAlignment="Right" Width="80" Margin="5">
                 <Label FontSize="20">Apply</Label>
             </Button>
+        </Grid>
+        <Grid Grid.Row="4">
+            <TextBlock Text="{Binding Status}"></TextBlock>
         </Grid>
     </Grid>
 </UserControl>

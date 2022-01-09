@@ -16,11 +16,11 @@ namespace FileManager.ViewModels
     {
         private ICommand _command;
 
-        public ICommand Command => _command ?? (_command = new BrowsePathCommand(
+        public ICommand Command => _command ??= new BrowsePathCommand(
                    x =>
                    {
                        BrowsePath();
-                   }));
+                   });
 
         private static void BrowsePath()
         {
