@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FileManager.ViewModels.Logic
 {
-    internal class CustomFile
+    public class CustomFile
     {
         public CustomFile(string path)
         {

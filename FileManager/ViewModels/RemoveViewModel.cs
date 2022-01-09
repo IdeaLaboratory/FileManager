@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FileManager.ViewModels.Logic;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -40,7 +41,7 @@ namespace FileManager.ViewModels
             set
             {
                 _isRemoving = value;
-                //UpdateNewFiles();
+                UpdateExistingFiles(_filePath);
             }
         }
 
@@ -77,9 +78,9 @@ namespace FileManager.ViewModels
         }
 
 
-        private IList<string> _existingFiles = new List<string>();
+        private IList<CustomFile> _existingFiles = new List<CustomFile>();
 
-        public IList<string> ExistingFiles
+        public IList<CustomFile> ExistingFiles
         {
             get { return _existingFiles; }
             set
@@ -115,9 +116,29 @@ namespace FileManager.ViewModels
                 Trace.WriteLine("New file path is not valid");
                 return;
             }
-
+            List<CustomFile> customFiles = new List<CustomFile>();
             var files= Directory.EnumerateFiles(newPath);
-            ExistingFiles = files.ToList();
+            foreach (var file in files)
+            {
+                customFiles.Add(new CustomFile(file));
+            }
+            foreach (var file1 in customFiles)
+            {
+                string newName = file1.Name;
+                if (IsReplacing)
+                {
+
+                }
+                if (IsRemoving)
+                {
+                    newName = _renameVm.Remove(newName);
+                }
+            }
+
+            ExistingFiles = customFiles;
         }
+
+
+
     }
 }
